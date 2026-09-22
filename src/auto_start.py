@@ -139,7 +139,8 @@ class AutoStartManager:
 
     def _is_player_connection_packet(self, data):
         """Check if the received data is a player connection packet."""
-        return data.startswith(b"\x09\x08\x00")
+        #return data.startswith(b"\x09\x08\x00")
+        return len(data) >= 3
 
     def listen_palworld_access_core(self):
         """Listen from PalWorld server port."""
